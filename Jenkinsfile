@@ -1,6 +1,12 @@
 pipeline {
 //	agent any
-	agent { dockerContainer { image 'maven:3.6.3' } }
+	agent {
+        docker {
+            // Specify the Docker image for the agent
+            image 'maven:3.6.3-jdk-11'
+            // You can also add other options like label, args, etc.
+        }
+	}
 	stages {
 		stage('Build') {
 			steps{
