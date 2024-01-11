@@ -6,11 +6,11 @@ pipeline {
 			steps{
 				echo "Build"
 				echo "PATH is $PATH"
-				echo "BUILD NUMBER is env.BUILD_NUMBER"
-				echo "BUILD ID is env.BUILD_ID"
-				echo "JOB Name is env.JOB_NAME"
-				echo "BUILD TAG IS env.BUILD_TAG"
-				echo "BUILD URL IS env.BUILD_URL"
+				echo "BUILD NUMBER is $env.BUILD_NUMBER"
+				echo "BUILD ID is $env.BUILD_ID"
+				echo "JOB Name is $env.JOB_NAME"
+				echo "BUILD TAG IS $env.BUILD_TAG"
+				echo "BUILD URL IS $env.BUILD_URL"
 
 			}
 		}
