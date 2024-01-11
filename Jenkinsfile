@@ -1,16 +1,17 @@
 pipeline {
-//	agent any
-	agent {
-        docker {
-            // Specify the Docker image for the agent
-            image 'maven:3.6.3'
-            // You can also add other options like label, args, etc.
-        }
-	}
+	agent any
+
 	stages {
 		stage('Build') {
 			steps{
 				echo "Build"
+				echo "PATH is $PATH"
+				echo "BUILD NUMBER is env.BUILD_NUMBER"
+				echo "BUILD ID is env.BUILD_ID"
+				echo "JOB Name is env.JOB_NAME"
+				echo "BUILD TAG IS env.BUILD_TAG"
+				echo "BUILD URL IS env.BUILD_URL"
+
 			}
 		}
 		stage('Test') {
