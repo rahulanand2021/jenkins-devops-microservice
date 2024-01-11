@@ -3,7 +3,7 @@ pipeline {
 	agent {
         docker {
             // Specify the Docker image for the agent
-            image 'maven:3.6.3-jdk-11'
+            image 'maven:3.6.3'
             // You can also add other options like label, args, etc.
         }
 	}
